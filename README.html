@@ -390,8 +390,8 @@ GitHub site, and it is ready for analysis.</p>
 </div>
 <div id="download-the-dataset-and-read-it-into-a-dataframe" class="section level1">
 <h1>Download the dataset and read it into a dataframe</h1>
-<p>url &lt;- “<a href="https://raw.githubusercontent.com/fivethirtyeight/data/master/candy-power-ranking/candy-data.csv" class="uri">https://raw.githubusercontent.com/fivethirtyeight/data/master/candy-power-ranking/candy-data.csv</a>”
-df &lt;- read.csv(url)</p>
+<pre class="{r}"><code>url &lt;- &quot;https://raw.githubusercontent.com/fivethirtyeight/data/master/candy-power-ranking/candy-data.csv&quot;
+df &lt;- read.csv(url)</code></pre>
 <p>I will select a subset of columns that I am interested in analyzing.
 In this case, I will select the columns for “competitorname”,
 “chocolate”, “winpercent” and “pricepercent”. I will also add meaningful
@@ -400,24 +400,23 @@ data.</p>
 </div>
 <div id="select-a-subset-of-columns" class="section level1">
 <h1>Select a subset of columns</h1>
-<p>subset_cols &lt;-
-c(“competitorname”,“chocolate”,“winpercent”,“pricepercent”) df_subset
-&lt;- df[,subset_cols]</p>
+<pre class="{r}"><code>subset_cols &lt;- c(&quot;competitorname&quot;,&quot;chocolate&quot;,&quot;winpercent&quot;,&quot;pricepercent&quot;)
+df_subset &lt;- df[,subset_cols]</code></pre>
 </div>
 <div id="rename-columns-with-meaningful-names" class="section level1">
 <h1>Rename columns with meaningful names</h1>
-<p>names(df_subset) &lt;- c(“Candy Name”,“Chocolate”,“Win
-Percentage”,“Price Percentage”)</p>
+<pre class="{r}"><code>names(df_subset) &lt;- c(&quot;Candy Name&quot;,&quot;Chocolate&quot;,&quot;Win Percentage&quot;,&quot;Price Percentage&quot;)</code></pre>
 <p>I will check the first few rows of the transformed dataframe to
 ensure that the data has been properly subsetted and renamed.</p>
 </div>
 <div id="print-first-few-rows-of-transformed-dataframe" class="section level1">
 <h1>Print first few rows of transformed dataframe</h1>
-<p>head(df_subset)</p>
+<pre class="{r}"><code>head(df_subset)</code></pre>
 <p>To ensure that the original data file is accessible through my code,
-I will store the data file in a public GitHub repository using its URL
-url = “<a href="https://raw.githubusercontent.com/username/repository/master/candy-data.csv" class="uri">https://raw.githubusercontent.com/username/repository/master/candy-data.csv</a>”
-df = pd.read_csv(url)</p>
+I will store the data file in a public GitHub repository using its
+URL</p>
+<pre class="{r}"><code>url = &quot;https://github.com/waheeb123/607-week-1-assignment-/master/candy-data.csv &quot;
+df = pd.read_csv(url)</code></pre>
 </div>
 <div id="findings-and-recommendations" class="section level1">
 <h1>Findings and Recommendations</h1>
