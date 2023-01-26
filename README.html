@@ -391,6 +391,13 @@ GitHub site, and it is ready for analysis.</p>
 <div id="download-the-dataset-and-read-it-into-a-dataframe" class="section level1">
 <h1>Download the dataset and read it into a dataframe</h1>
 <pre class="{r}"><code>url &lt;- &quot;https://raw.githubusercontent.com/fivethirtyeight/data/master/candy-power-ranking/candy-data.csv&quot;
+download.file(url, destfile = &quot;candy-data.csv&quot;, method = &quot;curl&quot;)
+
+</code></pre>
+<pre class="{r}"><code>candy_data &lt;- read.csv(&quot;candy-data.csv&quot;)
+candy_data</code></pre>
+<p>noticed make sure to add it or not</p>
+<pre class="{r}"><code>url &lt;- &quot;https://raw.githubusercontent.com/fivethirtyeight/data/master/candy-power-ranking/candy-data.csv&quot;
 df &lt;- read.csv(url)</code></pre>
 <p>I will select a subset of columns that I am interested in analyzing.
 In this case, I will select the columns for “competitorname”,

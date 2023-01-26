@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+1- # Download the dataset and read it into a dataframe
+url <- "https://raw.githubusercontent.com/fivethirtyeight/data/master/candy-power-ranking/candy-data.csv"
+df <- read.csv(url)

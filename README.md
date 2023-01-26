@@ -3,6 +3,7 @@ output:
   html_document: default
   pdf_document: waheeb Algabri
 ---
+
 # 607-week-1-assignment-
 
 # Overview
@@ -23,6 +24,20 @@ i will do the following.
 I have studied the data and read the associated fivethirtyeight.com article. The dataset contains information on 85 different candies, including the candy's name, its chocolate or non-chocolate category, whether it's a hard or soft candy, and its overall ranking in the survey. The survey was conducted by fivethirtyeight.com in 2016, with over 200,000 participants. The data is provided in a CSV file on the GitHub site, and it is ready for analysis.
 
 # Download the dataset and read it into a dataframe
+
+```{r}
+url <- "https://raw.githubusercontent.com/fivethirtyeight/data/master/candy-power-ranking/candy-data.csv"
+download.file(url, destfile = "candy-data.csv", method = "curl")
+
+
+```
+
+```{r}
+candy_data <- read.csv("candy-data.csv")
+candy_data
+```
+
+noticed make sure to add it or not 
 
 ```{r}
 url <- "https://raw.githubusercontent.com/fivethirtyeight/data/master/candy-power-ranking/candy-data.csv"
